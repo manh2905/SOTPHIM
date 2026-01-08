@@ -41,6 +41,29 @@ android {
 
 dependencies {
 
+    // Firebase (BOM nên đặt đầu tiên trong nhóm Firebase)
+    implementation("com.google.firebase:firebase-auth:23.1.0")
+
+    // Firebase Firestore (Dùng bản ktx để hỗ trợ tốt cho Kotlin)
+    implementation("com.google.firebase:firebase-firestore-ktx:25.1.1")
+
+    // Google Sign-In (Bản mới hỗ trợ Credential Manager)
+    implementation("com.google.android.gms:play-services-auth:21.2.0")
+
+
+    // Retrofit & Networking
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    // Media3 ExoPlayer (Cần thiết để phát m3u8 ở các bước sau)
+    implementation("androidx.media3:media3-exoplayer:1.2.0")
+    implementation("androidx.media3:media3-ui:1.2.0")
+
+    // Coil & UI Tooling
+    implementation("io.coil-kt:coil-compose:2.4.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.0")
+    implementation("androidx.navigation:navigation-compose:2.7.7")
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
